@@ -19,4 +19,8 @@
     return self;
 }
 
+-(void)addContact:(Contact *)newContact {
+    
+}
+
 @end

@@ -10,8 +10,11 @@
 
 @interface Contact : NSObject
 
+// We'll need a Contact class, with properties for name and email. Once you've made it, return to your main.m and create an instance of Contact, and use the user input to set the name and email properties.
+
 @property NSString * name;
 @property NSString * email;
+
 
 
 @end

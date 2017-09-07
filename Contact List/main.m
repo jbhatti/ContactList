@@ -16,14 +16,14 @@ int main(int argc, const char * argv[]) {
         
         BOOL inContactsApp = YES;
         
-        ContactList * addToContactList = [[ContactList alloc] init];
+        ContactList * contactList = [[ContactList alloc] init];
         
         
         while (inContactsApp) {
         
         // Task 1 Main menu and user input
         
-            InputCollector *newInputCollector = [[InputCollector alloc] init]; // initialize InputCollector to use in main.m and to be able to display Menu
+            InputCollector *newInputCollector = [[InputCollector alloc] init]; // initialize InputCollector to use in main.m and to be able to inputData
         
             NSString *displayMenu = [newInputCollector inputForPrompt:@"\nWhat would you like to do?\nnew - Create a new contact \nlist - List all contacts \nquit - Exit Application"]; //added argument for inputForPrompt
 
@@ -34,9 +34,9 @@ int main(int argc, const char * argv[]) {
                 
                 // Task 3 Implement contact creation
             } else if ([displayMenu isEqualToString:@"new"]) {
-                Contact *newContact = [[Contact alloc] init];
-                NSString *newContactName = [newContact name];
-                NSString *newContactEmail = [newContact email];
+                NSString *askName = [newInputCollector inputForPrompt:@"Enter your name"];
+                NSString *askEmail = [newInputCollector inputForPrompt:@"Enter your email"];
+                
                 
                     
             }
