@@ -10,4 +10,13 @@
 
 @implementation ContactList
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _storeContacts = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
 @end

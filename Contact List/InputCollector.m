@@ -12,10 +12,15 @@
 
 -(NSString *) inputForPrompt: (NSString *)promptString {
     
+    //to display message
+    NSLog(@"%@", promptString);
+    
     // receiving user input
     char inputChars[255];
     fgets(inputChars, 255, stdin);
+    NSString *inputString = [[NSString stringWithUTF8String:inputChars] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     
+    return inputString;
     
 }
 

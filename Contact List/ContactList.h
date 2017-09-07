@@ -10,4 +10,6 @@
 
 @interface ContactList : NSObject
 
+@property NSMutableArray * storeContacts;
+
 @end
