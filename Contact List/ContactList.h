@@ -15,6 +15,6 @@
 
 -(void)addContact:(Contact *)newContact;
 
-
+-(void) print;
 
 @end

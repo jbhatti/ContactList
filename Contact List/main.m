@@ -20,13 +20,13 @@ int main(int argc, const char * argv[]) {
         
         
         while (inContactsApp) {
-        
-        // Task 1 Main menu and user input
-        
+            
+            // Task 1 Main menu and user input
+            
             InputCollector *newInputCollector = [[InputCollector alloc] init]; // initialize InputCollector to use in main.m and to be able to inputData
-        
+            
             NSString *displayMenu = [newInputCollector inputForPrompt:@"\nWhat would you like to do?\nnew - Create a new contact \nlist - List all contacts \nquit - Exit Application"]; //added argument for inputForPrompt
-
+            
             // Task 2 Implement Exit functionality
             if ([displayMenu isEqualToString:@"quit"]) {
                 inContactsApp = NO;
@@ -34,11 +34,16 @@ int main(int argc, const char * argv[]) {
                 
                 // Task 3 Implement contact creation
             } else if ([displayMenu isEqualToString:@"new"]) {
-                NSString *askName = [newInputCollector inputForPrompt:@"Enter your name"];
-                NSString *askEmail = [newInputCollector inputForPrompt:@"Enter your email"];
+                NSString *name = [newInputCollector inputForPrompt:@"Enter your name"];
+                NSString *email = [newInputCollector inputForPrompt:@"Enter your email"];
+                Contact *newContact = [[Contact alloc] init];
+                newContact.email = email;
+                newContact.name = name;
+                [contactList.storeContacts addObject:newContact];
                 
-                
-                    
+                // Task 4
+            } else if ([displayMenu isEqualToString:@"list"]) {
+                [contactList print];
             }
             
         }

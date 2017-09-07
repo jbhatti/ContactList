@@ -20,7 +20,16 @@
 }
 
 -(void)addContact:(Contact *)newContact {
+    [_storeContacts addObject:newContact];
+}
+
+-(void) print {
+    int contactKey = 0;
     
+    for (Contact *contacts in _storeContacts){
+        NSLog(@"#%i: <%@ %@> ()", contactKey, contacts.name, contacts.email);
+        contactKey++;
+    }
 }
 
 @end

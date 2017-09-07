@@ -15,6 +15,4 @@
 @property NSString * name;
 @property NSString * email;
 
-
-
 @end
